@@ -116,7 +116,11 @@ div[data-testid="stHorizontalBlock"] {gap: 0.5rem;}
 
 
 # ---------------- CABECERA ---------------- #
-st.markdown("<h2 style='text-align:center;'>📊 Sistema de Generación de Reportes PE</h2>", unsafe_allow_html=True)
+st.markdown("""
+<h2 style='text-align:center; display:flex; justify-content:center; align-items:center; gap:8px;'>
+📊 <span style='font-family:Poppins, sans-serif;'>Sistema de Generación de Reportes <b>PE</b></span>
+</h2>
+""", unsafe_allow_html=True)
 st.caption("Sube los archivos correspondientes (.xlsx) de Postulantes, Instrumentos y FA. La app los clasificará automáticamente.")
 
 
@@ -209,4 +213,5 @@ if archivos:
         )
     else:
         st.info("Genera los tres reportes (Asistencia, OP1, OP2) antes de combinarlos.", icon="ℹ️")
+
 
