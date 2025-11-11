@@ -89,8 +89,19 @@ def combinar_reportes(plantilla_path, asistencia, op1, op2):
 # ---------------- ESTILO GENERAL ---------------- #
 st.markdown("""
 <style>
-.block-container {padding-top: 1rem; padding-bottom: 0.5rem;}
-h2, h3 {color: #1E3A8A;}
+.block-container {
+    padding-top: 2.5rem;    /* 🔼 Aumenta el espacio superior */
+    padding-bottom: 0.8rem;
+}
+h2, h3 {
+    color: #1E3A8A;
+    font-weight: 700;
+}
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
 .stButton>button {
     border-radius: 6px;
     height: 2.2em;
@@ -198,3 +209,4 @@ if archivos:
         )
     else:
         st.info("Genera los tres reportes (Asistencia, OP1, OP2) antes de combinarlos.", icon="ℹ️")
+
